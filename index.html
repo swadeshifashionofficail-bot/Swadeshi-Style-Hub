@@ -1,52 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Swadeshi Style Hub</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swadeshi Style Hub</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f5f5f5;
+}
+
+/* Header */
+.header{
+  background:#ff9933;
+  color:#fff;
+  padding:15px;
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* Search */
+.search-box{
+  padding:10px;
+}
+.search-box input{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  font-size:16px;
+}
+
+/* Banner */
+.banner{
+  margin:10px;
+  background:linear-gradient(to right,#ff9933,#138808);
+  color:#fff;
+  border-radius:15px;
+  padding:20px;
+}
+.banner h2{margin:0;}
+.banner p{margin:5px 0;}
+
+/* Categories */
+.categories{
+  display:flex;
+  justify-content:space-around;
+  margin:10px;
+}
+.cat{
+  background:#fff;
+  padding:10px;
+  border-radius:12px;
+  width:30%;
+  text-align:center;
+  font-weight:bold;
+}
+
+/* Products */
+.products{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  padding:10px;
+}
+.product{
+  background:#fff;
+  border-radius:15px;
+  padding:10px;
+}
+.product img{
+  width:100%;
+  border-radius:10px;
+}
+.product h4{
+  margin:5px 0;
+}
+.price{
+  color:green;
+  font-weight:bold;
+}
+
+/* Bottom Nav */
+.nav{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:#fff;
+  display:flex;
+  justify-content:space-around;
+  border-top:1px solid #ccc;
+}
+.nav div{
+  padding:10px;
+  font-size:14px;
+}
+</style>
 </head>
+
 <body>
 
-<header class="top-bar">
-  <h1>Swadeshi Style Hub</h1>
-</header>
+<div class="header">🇮🇳 Swadeshi Style Hub</div>
 
 <div class="search-box">
-  <input type="text" placeholder="Search Swadeshi Fashion">
+  <input type="text" placeholder="Search swadeshi fashion...">
 </div>
 
-<section class="banner">
+<div class="banner">
   <h2>Up to 30% OFF</h2>
-  <p>Indian & Western Wear</p>
-</section>
+  <p>Handloom & Desi Fashion</p>
+</div>
 
-<section class="products">
-  <div class="card">
-    <img src="https://i.imgur.com/3ZQ3ZQF.png">
-    <h3>Men Kurta</h3>
-    <p>₹799</p>
+<div class="categories">
+  <div class="cat">Men</div>
+  <div class="cat">Women</div>
+  <div class="cat">Kids</div>
+</div>
+
+<div class="products">
+  <div class="product">
+    <img src="https://i.imgur.com/0Z8FQYJ.png">
+    <h4>Khadi Kurta</h4>
+    <div class="price">₹799</div>
   </div>
 
-  <div class="card">
-    <img src="https://i.imgur.com/MR8QZqN.png">
-    <h3>Women Dress</h3>
-    <p>₹999</p>
+  <div class="product">
+    <img src="https://i.imgur.com/5qH1ZQF.png">
+    <h4>Handloom Saree</h4>
+    <div class="price">₹1499</div>
   </div>
 
-  <div class="card">
-    <img src="https://i.imgur.com/Wv6W9rY.png">
-    <h3>Western Jacket</h3>
-    <p>₹1299</p>
+  <div class="product">
+    <img src="https://i.imgur.com/nzYkK0B.png">
+    <h4>Ethnic Jacket</h4>
+    <div class="price">₹999</div>
   </div>
-</section>
 
-<footer class="bottom-nav">
-  <span>🏠 Home</span>
-  <span>🛍 Shop</span>
-  <span>❤️ Wishlist</span>
-  <span>👤 Profile</span>
-</footer>
+  <div class="product">
+    <img src="https://i.imgur.com/T5qH5ZL.png">
+    <h4>Desi Dress</h4>
+    <div class="price">₹1199</div>
+  </div>
+</div>
+
+<div style="height:70px;"></div>
+
+<div class="nav">
+  <div>🏠 Home</div>
+  <div>🛍 Shop</div>
+  <div>❤️ Wishlist</div>
+  <div>👤 Profile</div>
+</div>
 
 </body>
 </html>
