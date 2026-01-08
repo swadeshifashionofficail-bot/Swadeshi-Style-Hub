@@ -8,79 +8,92 @@
 <style>
 body{
   margin:0;
-  font-family: Arial, sans-serif;
-  background:#f5f5f5;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background:#f2f2f2;
+  color:#111;
 }
 
 /* Header */
 .header{
-  background:#ff9933;
+  background:#4b1c24; /* Deep Maroon */
   color:#fff;
-  padding:15px;
+  padding:16px;
   text-align:center;
-  font-size:20px;
-  font-weight:bold;
+  font-size:22px;
+  font-weight:600;
+  letter-spacing:1px;
 }
 
 /* Search */
 .search-box{
-  padding:10px;
+  padding:12px;
 }
 .search-box input{
   width:100%;
-  padding:12px;
-  border-radius:10px;
-  border:none;
+  padding:14px;
+  border-radius:12px;
+  border:1px solid #ccc;
   font-size:16px;
 }
 
 /* Banner */
 .banner{
-  margin:10px;
-  background:linear-gradient(to right,#ff9933,#138808);
+  margin:12px;
+  background:linear-gradient(to right,#4b1c24,#1f2a5a); /* Maroon → Royal Blue */
   color:#fff;
-  border-radius:15px;
-  padding:20px;
+  border-radius:18px;
+  padding:22px;
 }
-.banner h2{margin:0;}
-.banner p{margin:5px 0;}
+.banner h2{margin:0;font-size:22px;}
+.banner p{margin:6px 0;font-size:14px;}
+.banner button{
+  margin-top:10px;
+  background:#d4af37; /* Golden */
+  border:none;
+  padding:10px 16px;
+  border-radius:20px;
+  font-weight:bold;
+}
 
 /* Categories */
 .categories{
   display:flex;
   justify-content:space-around;
-  margin:10px;
+  margin:12px;
 }
 .cat{
   background:#fff;
-  padding:10px;
-  border-radius:12px;
+  padding:14px;
+  border-radius:14px;
   width:30%;
   text-align:center;
-  font-weight:bold;
+  font-weight:600;
+  box-shadow:0 4px 8px rgba(0,0,0,0.05);
 }
 
 /* Products */
 .products{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:10px;
-  padding:10px;
+  gap:12px;
+  padding:12px;
 }
 .product{
   background:#fff;
-  border-radius:15px;
+  border-radius:18px;
   padding:10px;
+  box-shadow:0 6px 12px rgba(0,0,0,0.08);
 }
 .product img{
   width:100%;
-  border-radius:10px;
+  border-radius:14px;
 }
 .product h4{
-  margin:5px 0;
+  margin:8px 0 4px;
+  font-size:15px;
 }
 .price{
-  color:green;
+  color:#1f7a1f;
   font-weight:bold;
 }
 
@@ -92,10 +105,10 @@ body{
   background:#fff;
   display:flex;
   justify-content:space-around;
-  border-top:1px solid #ccc;
+  border-top:1px solid #ddd;
 }
 .nav div{
-  padding:10px;
+  padding:12px;
   font-size:14px;
 }
 </style>
@@ -106,47 +119,48 @@ body{
 <div class="header">🇮🇳 Swadeshi Style Hub</div>
 
 <div class="search-box">
-  <input type="text" placeholder="Search swadeshi fashion...">
+  <input type="text" placeholder="Search Banarasi • Silk • Handloom">
 </div>
 
 <div class="banner">
-  <h2>Up to 30% OFF</h2>
-  <p>Handloom & Desi Fashion</p>
+  <h2>Luxury Handloom Collection</h2>
+  <p>Pure Banarasi & Silk Weaves</p>
+  <button>Shop Now</button>
 </div>
 
 <div class="categories">
-  <div class="cat">Men</div>
-  <div class="cat">Women</div>
-  <div class="cat">Kids</div>
+  <div class="cat">Banarasi</div>
+  <div class="cat">Silk</div>
+  <div class="cat">Handloom</div>
 </div>
 
 <div class="products">
   <div class="product">
-    <img src="https://i.imgur.com/0Z8FQYJ.png">
-    <h4>Khadi Kurta</h4>
-    <div class="price">₹799</div>
+    <img src="https://i.imgur.com/8mKQy7X.png">
+    <h4>Banarasi Silk Saree</h4>
+    <div class="price">₹4,999</div>
   </div>
 
   <div class="product">
-    <img src="https://i.imgur.com/5qH1ZQF.png">
-    <h4>Handloom Saree</h4>
-    <div class="price">₹1499</div>
+    <img src="https://i.imgur.com/Q9RZ7A9.png">
+    <h4>Katan Silk Dupatta</h4>
+    <div class="price">₹2,499</div>
   </div>
 
   <div class="product">
-    <img src="https://i.imgur.com/nzYkK0B.png">
-    <h4>Ethnic Jacket</h4>
-    <div class="price">₹999</div>
+    <img src="https://i.imgur.com/9P1QjQK.png">
+    <h4>Handloom Kurta</h4>
+    <div class="price">₹1,799</div>
   </div>
 
   <div class="product">
-    <img src="https://i.imgur.com/T5qH5ZL.png">
-    <h4>Desi Dress</h4>
-    <div class="price">₹1199</div>
+    <img src="https://i.imgur.com/J4k7LwO.png">
+    <h4>Royal Silk Stole</h4>
+    <div class="price">₹1,299</div>
   </div>
 </div>
 
-<div style="height:70px;"></div>
+<div style="height:80px;"></div>
 
 <div class="nav">
   <div>🏠 Home</div>
