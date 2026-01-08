@@ -1,99 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Swadeshi Style Hub</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f5f1ea;
-color:#333;
-}
-header{
-background:#ffffff;
-padding:15px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
-}
-header span{
-color:#e67e22;
-}
-.hero{
-padding:40px 20px;
-text-align:center;
-}
-.cards{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
-padding:20px;
-}
-.card{
-background:#6b3f2c;
-color:#fff;
-width:260px;
-padding:20px;
-border-radius:15px;
-}
-.card h3{
-margin-top:0;
-}
-.btn{
-display:inline-block;
-margin-top:10px;
-padding:8px 15px;
-background:#e67e22;
-color:#fff;
-text-decoration:none;
-border-radius:20px;
-}
-footer{
-background:#2e6b4f;
-color:#fff;
-text-align:center;
-padding:12px;
-font-size:14px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Swadeshi Style Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-Swadeshi <span>Style Hub</span>
+<header class="top-bar">
+  <h1>Swadeshi Style Hub</h1>
 </header>
 
-<section class="hero">
-<h1>Apna Fashion, Apni Pehchaan</h1>
-<p>Desi Roots • Modern Style</p>
+<div class="search-box">
+  <input type="text" placeholder="Search Swadeshi Fashion">
+</div>
+
+<section class="banner">
+  <h2>Up to 30% OFF</h2>
+  <p>Indian & Western Wear</p>
 </section>
 
-<section class="cards">
-<div class="card">
-<h3>Men Fashion</h3>
-<p>Authentic & modern ethnic wear</p>
-<a class="btn" href="#">Shop Now</a>
-</div>
+<section class="products">
+  <div class="card">
+    <img src="https://i.imgur.com/3ZQ3ZQF.png">
+    <h3>Men Kurta</h3>
+    <p>₹799</p>
+  </div>
 
-<div class="card">
-<h3>Women Fashion</h3>
-<p>Elegant Indian & fusion wear</p>
-<a class="btn" href="#">Shop Now</a>
-</div>
+  <div class="card">
+    <img src="https://i.imgur.com/MR8QZqN.png">
+    <h3>Women Dress</h3>
+    <p>₹999</p>
+  </div>
 
-<div class="card">
-<h3>Khadi Collection</h3>
-<p>Proudly Indian & sustainable</p>
-<a class="btn" href="#">Shop Now</a>
-</div>
+  <div class="card">
+    <img src="https://i.imgur.com/Wv6W9rY.png">
+    <h3>Western Jacket</h3>
+    <p>₹1299</p>
+  </div>
 </section>
 
-<footer>
-© 2026 Swadeshi Style Hub 🇮🇳
+<footer class="bottom-nav">
+  <span>🏠 Home</span>
+  <span>🛍 Shop</span>
+  <span>❤️ Wishlist</span>
+  <span>👤 Profile</span>
 </footer>
 
 </body>
