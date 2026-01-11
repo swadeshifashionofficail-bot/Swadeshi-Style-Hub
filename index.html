@@ -1,185 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Swadeshi Style Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-  margin:0;
-  font-family:'Segoe UI',Arial,sans-serif;
-  background:#f2f2f2;
-  color:#111;
-}
+  <title>Swadeshi Style Hub – Indian Fashion Brand</title>
+  <meta name="description" content="Swadeshi Style Hub – Premium Indian fashion brand. Affordable, stylish & Made in India clothing.">
+  <meta name="keywords" content="Swadeshi fashion, Indian clothing, Style Hub, ethnic wear">
 
-/* Header */
-.header{
-  background:#4b1c24;
-  color:#fff;
-  padding:16px;
-  text-align:center;
-  font-size:22px;
-  font-weight:600;
-}
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+    body{background:#fff;color:#333;}
 
-/* Search */
-.search-box{
-  padding:12px;
-}
-.search-box input{
-  width:100%;
-  padding:14px;
-  border-radius:12px;
-  border:1px solid #ccc;
-  font-size:16px;
-}
+    header{
+      background:#111;color:#fff;
+      padding:15px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+    header h1{font-size:20px;}
 
-/* Banner */
-.banner{
-  margin:12px;
-  background:linear-gradient(to right,#4b1c24,#1f2a5a);
-  color:#fff;
-  border-radius:18px;
-  padding:22px;
-}
-.banner h2{margin:0;font-size:22px;}
-.banner p{margin:6px 0;font-size:14px;}
-.banner button{
-  margin-top:10px;
-  background:#d4af37;
-  border:none;
-  padding:10px 18px;
-  border-radius:20px;
-  font-weight:bold;
-  cursor:pointer;
-}
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin-left:15px;
+      font-size:14px;
+    }
 
-/* Categories */
-.categories{
-  display:flex;
-  justify-content:space-around;
-  margin:12px;
-}
-.cat{
-  background:#fff;
-  padding:14px;
-  border-radius:14px;
-  width:30%;
-  text-align:center;
-  font-weight:600;
-  box-shadow:0 4px 8px rgba(0,0,0,.05);
-  cursor:pointer;
-}
+    .hero{
+      padding:50px 20px;
+      text-align:center;
+      background:#f5f5f5;
+    }
+    .hero h2{font-size:28px;margin-bottom:10px;}
+    .hero p{font-size:16px;margin-bottom:20px;}
+    .btn{
+      background:#111;
+      color:#fff;
+      padding:12px 25px;
+      border:none;
+      cursor:pointer;
+      font-size:15px;
+    }
 
-/* Products */
-.products{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  padding:12px;
-}
-.product{
-  background:#fff;
-  border-radius:18px;
-  padding:10px;
-  box-shadow:0 6px 12px rgba(0,0,0,.08);
-}
-.product img{
-  width:100%;
-  border-radius:14px;
-}
-.product h4{
-  margin:8px 0 4px;
-  font-size:15px;
-}
-.price{
-  color:#1f7a1f;
-  font-weight:bold;
-}
+    section{padding:40px 20px;}
+    section h2{text-align:center;margin-bottom:30px;}
 
-/* Bottom Nav */
-.nav{
-  position:fixed;
-  bottom:0;
-  width:100%;
-  background:#fff;
-  display:flex;
-  justify-content:space-around;
-  padding:10px 0;
-  border-top:1px solid #ddd;
-}
-.nav div{
-  font-size:14px;
-  cursor:pointer;
-}
-</style>
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+    .product{
+      border:1px solid #ddd;
+      padding:15px;
+      text-align:center;
+    }
+    .product img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+    .product h3{margin:10px 0;}
+    .product p{font-size:14px;margin-bottom:10px;}
+
+    footer{
+      background:#111;
+      color:#fff;
+      text-align:center;
+      padding:20px;
+      font-size:14px;
+    }
+
+    /* Mobile Bottom Menu */
+    .bottom-menu{
+      display:none;
+    }
+    @media(max-width:768px){
+      nav{display:none;}
+      .bottom-menu{
+        display:flex;
+        position:fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        background:#111;
+        justify-content:space-around;
+        padding:10px 0;
+      }
+      .bottom-menu a{
+        color:#fff;
+        font-size:13px;
+        text-decoration:none;
+      }
+      body{padding-bottom:60px;}
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="header">🇮🇳 Swadeshi Style Hub</div>
+<header>
+  <h1>Swadeshi Style Hub</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<div class="search-box">
-  <input type="text" placeholder="Search Banarasi • Silk • Handloom">
+<!-- HERO -->
+<div class="hero" id="home">
+  <h2>Premium Swadeshi Fashion</h2>
+  <p>Made in India • Affordable • Stylish</p>
+  <button class="btn" onclick="goWhatsapp()">Order on WhatsApp</button>
 </div>
 
-<div class="banner">
-  <h2>Luxury Handloom Collection</h2>
-  <p>Pure Banarasi & Silk Weaves</p>
-  <button onclick="shopNow()">Shop Now</button>
-</div>
+<!-- PRODUCTS -->
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="products">
 
-<div class="categories">
-  <div class="cat" onclick="openCategory('Banarasi')">Banarasi</div>
-  <div class="cat" onclick="openCategory('Silk')">Silk</div>
-  <div class="cat" onclick="openCategory('Handloom')">Handloom</div>
-</div>
+    <div class="product">
+      <img src="https://via.placeholder.com/300x400" alt="Product">
+      <h3>Men T-Shirt</h3>
+      <p>Fabric: Polyester</p>
+      <p>Price: ₹499</p>
+      <button class="btn" onclick="goWhatsapp()">Buy Now</button>
+    </div>
 
-<div class="products">
-  <div class="product">
-    <img src="https://source.unsplash.com/400x500/?banarasi,saree">
-    <h4>Banarasi Silk Saree</h4>
-    <div class="price">₹4,999</div>
-  </div>
-
-  <div class="product">
-    <img src="https://source.unsplash.com/400x500/?silk,dupatta">
-    <h4>Katan Silk Dupatta</h4>
-    <div class="price">₹2,499</div>
-  </div>
-
-  <div class="product">
-    <img src="https://source.unsplash.com/400x500/?handloom,kurta">
-    <h4>Handloom Kurta</h4>
-    <div class="price">₹1,799</div>
-  </div>
-
-  <div class="product">
-    <img src="https://source.unsplash.com/400x500/?silk,stole">
-    <h4>Royal Silk Stole</h4>
-    <div class="price">₹1,299</div>
-  </div>
-</div>
-
-<div class="nav">
-  <div onclick="navClick('Home')">🏠 Home</div>
-  <div onclick="navClick('Shop')">🛍️ Shop</div>
-  <div onclick="navClick('Wishlist')">❤️ Wishlist</div>
-  <div onclick="navClick('Profile')">👤 Profile</div>
-</div>
-
-<script>
-function shopNow(){
-  alert("Shop feature coming soon 🚀");
-}
-function openCategory(name){
-  alert(name + " collection opening soon 🧵");
-}
-function navClick(name){
-  alert(name + " page coming soon 📱");
-}
-</script>
-
-</body>
-</html>
+    <
